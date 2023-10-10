@@ -1,12 +1,7 @@
-
-export default function App() {
-
-  return (
-    <div className="app">
-      <h1>Catatan Belanjaku</h1>
-      <form className="add-form">
+<div className="app">
+    <h1>Catatan Belanjaku 📝</h1>
+    <form className="add-form">
       <h3>Hari ini belanja apa kita?</h3>
-
       <div>
         <select>
           <option value="1">1</option>
@@ -18,28 +13,27 @@ export default function App() {
         <input type="text" placeholder="nama barang..." />
       </div>
       <button>Tambah</button>
-      </form>
-
-      <div className="list">
-        <ul>
+    </form>
+    <div className="list">
+      <ul>
         <li>
           <input type="checkbox" checked="true" />
-          <span >1 Kopi</span>
-          <button>&times;</button>
-        <li>
-          <input type="checkbox" />
-          <span >5 Gula Pasir</span>
+          <span style="text-decoration: line-through">1 Kopi</span>
           <button>&times;</button>
         </li>
         <li>
           <input type="checkbox" />
-          <span >3 Air Mineral</span>
+          <span>5 Gula Pasir</span>
           <button>&times;</button>
         </li>
+        <li>
+          <input type="checkbox" />
+          <span>3 Air Mineral</span>
+          <button>&times;</button>
         </li>
-        </ul>
-      </div>
-      <div className="actions">
+      </ul>
+    </div>
+    <div className="actions">
       <select>
         <option value="input">Urutkan berdasarkan urutan input</option>
         <option value="name">Urutkan berdasarkan nama barang</option>
@@ -48,6 +42,4 @@ export default function App() {
       <button>Bersihkan Daftar</button>
     </div>
     <footer className="stats">Ada 10 barang di daftar belanjaan, 5 barang sudah dibeli (50%)</footer>
-    </div>
-  );
-}
+  </div>
