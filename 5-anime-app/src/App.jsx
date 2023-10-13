@@ -42,12 +42,13 @@ const animesData = [
 
 export default function App() {
   
+  const [animes, setAnimes] = useState(animesData);
   
 
   return (
     <>
-      <NavBar />
-      <Main />
+      <NavBar animes={ animes }/>
+      <Main animes={ animes } />
     </>
   );
 }
@@ -91,10 +92,9 @@ function NumResult(){
   )
 }
 
-function Main(){
+function Main({animes}){
 
   const [selectedAnime, setSelectedAnime] = useState(animes[0]);
-  const [animes, setAnimes] = useState(animesData);
   
 
   function handleSelectedAnime(id) {
@@ -153,7 +153,7 @@ function SelectedBox({ selectedAnime }){
 
   const [isOpen2, setIsOpen2] = useState(true);
 
-  return (
+  return ( 
     <div className="box">
     <button className="btn-toggle" onClick={() => setIsOpen2((open) => !open)}>
       {isOpen2 ? '–' : '+'}
